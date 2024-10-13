@@ -58,7 +58,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/home/home.html',
+            template: './src/views/home.html',
             chunks: ['home'],
             filename: 'home.html',
             minify: {
