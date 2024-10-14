@@ -16,7 +16,7 @@ const compiler = webpack(config);
 // require('./database');
 
 // settings
-app.set('views', path.join(__dirname, 'dist'));
+app.set('views', path.join(__dirname, 'src/views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('port', process.env.PORT);
@@ -29,7 +29,7 @@ app.use(
         publicPath: config.output.publicPath,
     })
 )
-    .use(morgan('dev'))
+    // .use(morgan('dev'))
     .use(express.urlencoded({ extended: false }))
     .use(express.json())
     .use(cors());
